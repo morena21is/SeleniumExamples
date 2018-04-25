@@ -15,7 +15,7 @@ public class SeleniumTest {
     private static WebDriver driver;
     
     @Test
-    public void testChromeDriver() {
+    public void testFirefoxDriver() {
         
         System.setProperty("webdriver.gecko.driver", "./src/test/java/resources/geckodriver.exe");
         driver = new FirefoxDriver();
@@ -31,7 +31,7 @@ public class SeleniumTest {
         driver.quit();
     }
     @Test
-    public void testFirefoxDriver() {
+    public void testChromeDriver() {
 
         System.setProperty("webdriver.chrome.driver", "./src/test/java/resources/chromedriver.exe");
         driver = new ChromeDriver();
