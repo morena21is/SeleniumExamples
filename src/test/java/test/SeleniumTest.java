@@ -16,6 +16,7 @@ public class SeleniumTest {
     
     @Test
     public void testChromeDriver() {
+        
         System.setProperty("webdriver.gecko.driver", "./src/test/java/resources/geckodriver.exe");
         driver = new FirefoxDriver();
         driver.get("http://www.google.com");
