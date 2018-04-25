@@ -38,7 +38,7 @@ public class SeleniumTest {
         driver.get("https://www.youtube.com/watch?v=hvCALPmg9NE");
         
         WebDriverWait waitElement = new WebDriverWait(driver,15);
-        waitElement.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("#container > h1 > yt-formatted-string"))));
+        waitElement.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector("#container > h1 > yt-formatted-string")));
                 
         WebElement element = driver.findElement(By.xpath("//*[@id=\"container\"]/h1/yt-formatted-string"));
         Assert.assertEquals("Costi Ionita - Cate nopti am plans [HQ]",element.getText());
