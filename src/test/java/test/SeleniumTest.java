@@ -7,7 +7,6 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,8 +16,10 @@ public class SeleniumTest {
     @Test
     public void testFirefoxDriver() {
         
-        System.setProperty("webdriver.gecko.driver", "./src/test/java/resources/geckodriver.exe");
-        driver = new FirefoxDriver();
+//        System.setProperty("webdriver.gecko.driver", "./src/test/java/resources/geckodriver.exe");
+//        driver = new FirefoxDriver();
+        System.setProperty("webdriver.chrome.driver", "./src/test/java/resources/chromedriver.exe");
+        driver = new ChromeDriver();
         driver.get("http://www.google.com");
 
         WebDriverWait wait = new WebDriverWait(driver,5);
