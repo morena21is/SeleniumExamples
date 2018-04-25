@@ -40,8 +40,7 @@ public class SeleniumTest {
         WebDriverWait waitElement = new WebDriverWait(driver,15);
         waitElement.until(ExpectedConditions.visibilityOf(driver.findElement(By.cssSelector("#container > h1 > yt-formatted-string"))));
                 
-        WebElement element = driver.findElement(By.cssSelector("#container > h1 > yt-formatted-string"));
-        System.out.println(element.getText());
+        WebElement element = driver.findElement(By.xpath("//*[@id=\"container\"]/h1/yt-formatted-string"));
         Assert.assertEquals("Costi Ionita - Cate nopti am plans [HQ]",element.getText());
         
         driver.quit();
